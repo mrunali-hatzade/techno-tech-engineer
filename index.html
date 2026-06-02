@@ -8,24 +8,17 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Global 3D Equipment Background -->
-    <div id="global-3d-bg">
-        <img src="assets/images/3d_gear_bg.png" alt="" class="bg-3d float-1">
-        <img src="assets/images/3d_turbine_bg.png" alt="" class="bg-3d float-2">
-        <img src="assets/images/3d_arm_bg.png" alt="" class="bg-3d float-3">
-    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo text-logo">
-                <span style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--primary-color);">Techno Tech</span>
-                <span style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.2rem; color: #fff;"> Engineer</span>
+                <span style="font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--primary-color);">Techno Tech</span>
+                <span style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #fff;"> Engineer</span>
             </a>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -53,24 +46,28 @@
     <header id="home" class="hero">
         <div id="tsparticles"></div>
         <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content fade-in-left">
-                <div class="badge">Next-Gen Engineering</div>
-                <h1 class="gradient-text">Industrial<br>Fabrication<br>Excellence</h1>
-                <p>Leading provider of Food Processing Plants, Turnkey Solutions, and custom precision Industrial Fabrication in Karad.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn-primary btn-3d">Explore R&D</a>
-                    <a href="#contact" class="btn-secondary btn-3d">Get a Quote</a>
+        <div class="container hero-container cinematic-hero">
+            
+            <button id="play-welcome-btn" class="btn-play-audio">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                <span style="font-size: 0.9rem;">Play Audio Welcome</span>
+            </button>
+
+            <div class="cinematic-title-container">
+                <h1 class="cinematic-title">Welcome to<br>TechnoTech Engineers</h1>
+            </div>
+            
+            <div class="cinematic-tagline-container">
+                <p class="cinematic-tagline">Engineering Excellence &bull; Fabrication &bull; Erection &bull; Commissioning</p>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Explore</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
                 </div>
             </div>
-            <div class="hero-visual fade-in-right">
-                <div class="floating-box box-1" data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-glare="true">
-                    <img src="assets/images/Turnkey.jpg" alt="Turnkey Solutions">
-                </div>
-                <div class="floating-box box-2" data-tilt data-tilt-max="30" data-tilt-speed="400">
-                    <img src="assets/images/Pro-02.jpg" alt="Precision Engineering">
-                </div>
-            </div>
+
         </div>
     </header>
 
