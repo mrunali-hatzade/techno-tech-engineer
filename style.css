@@ -1,18 +1,20 @@
 /* Modern Premium Reset & Base Styles */
 :root {
-    --primary-color: #ff6b35; /* Vibrant Orange for industrial look */
-    --primary-hover: #e85a28;
-    --bg-light: #f8f9fa;
-    --bg-dark: #121212;
-    --text-dark: #212529;
-    --text-light: #e0e0e0;
+    --primary-color: #0f62fe; /* Global Corporate Blue */
+    --secondary-color: #161616; /* Professional Dark */
+    --text-dark: #161616;
+    --text-light: #ffffff;
+    --bg-light: #ffffff;
+    --bg-dark: #161616;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
     --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
     --shadow-strong: 0 15px 45px rgba(0, 0, 0, 0.2);
-    --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.6);
-    --transition-fast: 0.3s ease;
-    --transition-slow: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --shadow-glow: 0 0 20px rgba(15, 98, 254, 0.4);
+    --transition-fast: all 0.3s ease;
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
 }
 
 * {
@@ -26,7 +28,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     color: var(--text-dark);
     background-color: var(--bg-light);
     line-height: 1.6;
@@ -34,7 +36,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -58,12 +60,11 @@ img {
 }
 
 .gradient-text {
-    background: linear-gradient(45deg, #ff6b35, #ffb235, #ff6b35);
-    background-size: 200% auto;
-    color: transparent;
+    background: linear-gradient(45deg, var(--primary-color), #4589ff);
     -webkit-background-clip: text;
     background-clip: text;
-    animation: shine 3s linear infinite;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 @keyframes shine {
@@ -220,19 +221,55 @@ img {
     transition: var(--transition-fast);
 }
 
-.nav-links a:not(.btn-primary)::after {
+.nav-links a::after {
     content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--primary-color);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
     transition: var(--transition-fast);
 }
 
-.nav-links a:not(.btn-primary):hover::after {
+.nav-links a:hover::after {
     width: 100%;
+}
+
+.nav-links .btn-primary::after {
+    display: none;
+}
+
+/* Dropdown CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+}
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .hamburger {
@@ -257,7 +294,7 @@ img {
     position: relative;
     padding-top: 120px; /* added padding to clear navbar */
     overflow: hidden;
-    background: linear-gradient(135deg, #0b192c 0%, #1a365d 100%);
+    background: linear-gradient(135deg, #161616 0%, #262626 100%);
     color: #fff;
 }
 
@@ -591,7 +628,9 @@ img {
     transform: translateZ(30px);
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -603,11 +642,18 @@ img {
     transition: var(--transition-fast);
 }
 
-.contact-form input::placeholder, .contact-form textarea::placeholder {
+.contact-form input::placeholder, .contact-form select::placeholder, .contact-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+/* Light Theme overrides for Career Form */
+.career-form input::placeholder, 
+.career-form select::placeholder, 
+.career-form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
     border-color: var(--primary-color);
     background: rgba(255, 255, 255, 0.1);
 }

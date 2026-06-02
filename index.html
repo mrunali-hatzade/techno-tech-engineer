@@ -8,7 +8,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo text-logo">
-                <span style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--primary-color);">Techno Tech</span>
-                <span style="font-family: 'Inter', sans-serif; font-weight: 400; font-size: 1.2rem; color: #fff;"> Engineer</span>
+                <span style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--primary-color);">Techno Tech</span>
+                <span style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 1.2rem; color: #fff;"> Engineer</span>
             </a>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -34,7 +34,13 @@
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About & Team</a></li>
+                <li class="dropdown">
+                    <a href="#about" class="dropbtn">About ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#about">About Us</a>
+                        <a href="#team">Our Team</a>
+                    </div>
+                </li>
                 <li><a href="#services">Services & R&D</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li>
@@ -94,7 +100,7 @@
     </section>
 
     <!-- Staff Section -->
-    <section class="staff section-padding bg-dark">
+    <section id="team" class="staff section-padding bg-dark">
         <div class="container">
             <div class="section-title fade-in">
                 <h2 class="gradient-text">Our Leadership Team</h2>
@@ -175,14 +181,14 @@
                 <p>A closer look at our precision manufacturing.</p>
             </div>
             <div class="masonry-gallery perspective-container">
-                <img src="assets/images/Pro-01.jpg" alt="Project 1" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-03.jpg" alt="Project 3" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-04.jpg" alt="Project 4" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-05.jpg" alt="Project 5" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-06.jpg" alt="Project 6" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-07.jpg" alt="Project 7" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-08.jpg" alt="Project 8" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
-                <img src="assets/images/Pro-09.jpg" alt="Project 9" class="gallery-img" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-01.jpg" alt="Project 1" class="gallery-img fade-in-up" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-03.jpg" alt="Project 3" class="gallery-img fade-in-up delay-1" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-04.jpg" alt="Project 4" class="gallery-img fade-in-up delay-2" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-05.jpg" alt="Project 5" class="gallery-img fade-in-up delay-3" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-06.jpg" alt="Project 6" class="gallery-img fade-in-up" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-07.jpg" alt="Project 7" class="gallery-img fade-in-up delay-1" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-08.jpg" alt="Project 8" class="gallery-img fade-in-up delay-2" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
+                <img src="assets/images/Pro-09.jpg" alt="Project 9" class="gallery-img fade-in-up delay-3" data-tilt data-tilt-max="5" data-tilt-scale="1.05">
             </div>
         </div>
     </section>
@@ -293,17 +299,46 @@
                         <h2 style="margin-bottom:20px;">Submit Feedback</h2>
                         <form class="contact-form">
                             <input type="text" placeholder="Your Name or Company" required>
-                            <select style="width: 100%; padding: 15px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: #fff; outline: none; margin-bottom:20px;">
+                            <select required>
                                 <option value="" disabled selected>Rate your experience</option>
                                 <option value="5" style="color:black">⭐⭐⭐⭐⭐ Excellent</option>
-                                <option value="4" style="color:black">⭐⭐⭐⭐ Good</option>
+                                <option value="4" style="color:black">⭐⭐⭐⭐ Very Good</option>
                                 <option value="3" style="color:black">⭐⭐⭐ Average</option>
+                                <option value="2" style="color:black">⭐⭐ Poor</option>
+                                <option value="1" style="color:black">⭐ Very Poor</option>
                             </select>
                             <textarea placeholder="Share your experience working with us" rows="3" required></textarea>
                             <button type="submit" class="btn-secondary btn-3d">Submit Feedback</button>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Opportunity Section -->
+    <section id="career" class="career section-padding bg-light">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Career Opportunities</h2>
+                <div class="underline"></div>
+                <p>Join our team of innovative engineers and designers.</p>
+            </div>
+            <div class="career-form-container glass-panel fade-in-up" style="max-width: 600px; margin: 0 auto; background: #fff; border: 1px solid #ddd; padding: 40px; border-radius: 15px; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <form class="contact-form career-form">
+                    <input type="text" placeholder="Full Name" required style="border-color:#ccc; color:#333; background:#fafafa;">
+                    <input type="email" placeholder="Email Address" required style="border-color:#ccc; color:#333; background:#fafafa;">
+                    <select required style="border-color:#ccc; color:#333; background:#fafafa;">
+                        <option value="" disabled selected>Role Applied For</option>
+                        <option value="fabrication">Fabrication Engineer</option>
+                        <option value="design">CAD Designer</option>
+                        <option value="project_manager">Project Manager</option>
+                        <option value="rnd">R&D Specialist</option>
+                    </select>
+                    <input type="url" placeholder="Link to Resume/Portfolio (LinkedIn, Drive, etc.)" required style="border-color:#ccc; color:#333; background:#fafafa;">
+                    <textarea placeholder="Cover Letter / Why do you want to join us?" rows="4" required style="border-color:#ccc; color:#333; background:#fafafa;"></textarea>
+                    <button type="submit" class="btn-primary btn-3d" style="width: 100%;">Submit Application</button>
+                </form>
             </div>
         </div>
     </section>
