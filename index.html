@@ -17,8 +17,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo text-logo">
-                <span style="font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--primary-color);">Techno Tech</span>
-                <span style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #fff;"> Engineer</span>
+                <span class="logo-part-1">Techno Tech</span>
+                <span class="logo-part-2"> Engineer</span>
             </a>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -44,22 +44,16 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <div id="tsparticles"></div>
+        <video autoplay loop muted playsinline id="hero-video">
+            <source src="TechnoTech_Engineers_hero_video_202606031114.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-overlay"></div>
         <div class="container hero-container cinematic-hero">
             
-            <button id="play-welcome-btn" class="btn-play-audio">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
-                <span style="font-size: 0.9rem;">Play Audio Welcome</span>
-            </button>
 
-            <div class="cinematic-title-container">
-                <h1 class="cinematic-title">Welcome to<br>TechnoTech Engineers</h1>
-            </div>
             
-            <div class="cinematic-tagline-container">
-                <p class="cinematic-tagline">Engineering Excellence &bull; Fabrication &bull; Erection &bull; Commissioning</p>
-            </div>
+
 
             <div class="scroll-indicator">
                 <span>Explore</span>

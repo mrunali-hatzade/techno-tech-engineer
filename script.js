@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 color: {
-                    value: ["#ffffff", "#ff6b35", "#ffb235"]
+                    value: ["#ffffff", "#0f62fe", "#4589ff"]
                 },
                 shape: {
                     type: "circle"
@@ -146,51 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             retina_detect: true
-        });
-    }
-
-    // --- Cinematic Hero Experience ---
-    const playBtn = document.getElementById('play-welcome-btn');
-    const cinematicTitle = document.querySelector('.cinematic-title');
-    const cinematicTagline = document.querySelector('.cinematic-tagline');
-    
-    // 1. Auto-play text animations on page load (no click required)
-    setTimeout(() => {
-        if (cinematicTitle) cinematicTitle.classList.add('animate-in');
-        if (cinematicTagline) cinematicTagline.classList.add('animate-in');
-    }, 500);
-
-    // 2. Optional Audio Welcome (Female Voice)
-    if (playBtn) {
-        playBtn.addEventListener('click', () => {
-            // Hide the button after playing
-            playBtn.style.opacity = '0';
-            playBtn.style.pointerEvents = 'none';
-            setTimeout(() => playBtn.style.display = 'none', 500);
-
-            if ('speechSynthesis' in window) {
-                const msg = new SpeechSynthesisUtterance();
-                msg.text = "Welcome to Technotech Engineers.";
-                msg.lang = "en-US";
-                
-                // Force a female voice (Microsoft Zira, Google Female, Samantha, etc.)
-                const voices = window.speechSynthesis.getVoices();
-                const femaleVoice = voices.find(v => 
-                    v.name.includes('Zira') || 
-                    v.name.includes('Samantha') || 
-                    v.name.includes('Victoria') || 
-                    v.name.includes('Female') ||
-                    v.name.includes('Google UK English Female') ||
-                    v.name.includes('Google US English')
-                );
-                
-                if (femaleVoice) {
-                    msg.voice = femaleVoice;
-                }
-                msg.rate = 0.9;
-                msg.pitch = 1.2; // Slightly higher pitch for female voice
-                window.speechSynthesis.speak(msg);
-            }
         });
     }
 
